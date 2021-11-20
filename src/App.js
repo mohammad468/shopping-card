@@ -1,13 +1,13 @@
 import "./App.scss";
-
-// *start context
+// *Store
+import Store from "./components/Store";
+// *context
 import ProductContextProvider from "./context/ProductContextProvider";
-// *start context
 
 function App() {
   return (
     <ProductContextProvider>
-      <h1>hello world!</h1>
+      <Store />
     </ProductContextProvider>
   );
 }
