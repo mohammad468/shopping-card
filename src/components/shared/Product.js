@@ -1,19 +1,24 @@
 import React from "react";
 import { Card, Button, Col } from "react-bootstrap";
+import "./product.scss";
 
 const Product = ({ productData }) => {
   return (
-    <Col className="my-3">
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={productData.image} />
+    <Col className="my-3 d-flex justify-content-around">
+      <Card className="my-cards" style={{ width: "18rem", height: "30rem" }}>
+        <Card.Img
+          variant="top"
+          style={{ height: "15rem" }}
+          src={productData.image}
+          fluid
+        />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Add to card</Button>
+          <Card.Title>{`${productData.price} $`}</Card.Title>
+          <Card.Text>{productData.title}</Card.Text>
         </Card.Body>
+        <Button variant="primary" className="mx-2 my-3">
+          Add to card
+        </Button>
       </Card>
     </Col>
   );
