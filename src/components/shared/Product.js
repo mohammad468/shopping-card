@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Button, Col } from "react-bootstrap";
 import "./product.scss";
+import { shorten } from "../helpers/functions";
 
 const Product = ({ productData }) => {
   return (
@@ -14,11 +15,9 @@ const Product = ({ productData }) => {
         />
         <Card.Body>
           <Card.Title>{`${productData.price} $`}</Card.Title>
-          <Card.Text>{productData.title}</Card.Text>
+          <Card.Text>{shorten(productData.title)}</Card.Text>
         </Card.Body>
-        <Button className="mx-2 my-3">
-          Add to card
-        </Button>
+        <Button className="mx-2 my-3">Add to card</Button>
       </Card>
     </Col>
   );
