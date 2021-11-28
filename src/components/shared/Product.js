@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Button, Col } from "react-bootstrap";
 import "./product.scss";
 import { shorten } from "../helpers/functions";
+import { Link } from "react-router-dom";
 
 const Product = ({ productData }) => {
   return (
@@ -15,8 +16,16 @@ const Product = ({ productData }) => {
         />
         <Card.Body>
           <Card.Title>{`${productData.price} $`}</Card.Title>
-          <Card.Text>{shorten(productData.title)}</Card.Text>
+          <Card.Text>
+            <Link
+              to={`/products/${productData.id}`}
+              className="card-text-link text-decoration-none"
+            >
+              {shorten(productData.title)}
+            </Link>
+          </Card.Text>
         </Card.Body>
+
         <Button className="mx-2 my-3">Add to card</Button>
       </Card>
     </Col>
