@@ -16,7 +16,7 @@ const Product = ({ productData }) => {
           <Card.Title>{`${productData.price} $`}</Card.Title>
           <Card.Text>{productData.title}</Card.Text>
         </Card.Body>
-        <Button variant="primary" className="mx-2 my-3">
+        <Button className="mx-2 my-3">
           Add to card
         </Button>
       </Card>

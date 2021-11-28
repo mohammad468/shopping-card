@@ -1,5 +1,4 @@
 import React from "react";
-import { Row, Container } from "react-bootstrap";
 
 // *components
 import Products from "./shared/Products";
