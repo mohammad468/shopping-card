@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Badge, Col, Container, Image, Row, Button } from "react-bootstrap";
+import { Badge, Col, Container, Image, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./shared/product.scss";
 import { FaArrowCircleLeft } from "react-icons/fa";
