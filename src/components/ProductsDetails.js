@@ -3,6 +3,7 @@ import { Badge, Col, Container, Image, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./shared/product.scss";
 import { FaArrowCircleLeft } from "react-icons/fa";
+import ReactTooltip from "react-tooltip";
 
 // *import context
 import { ProductsContext } from "../context/ProductContextProvider";
@@ -24,7 +25,10 @@ const ProductsDetails = (props) => {
               <div className="align-items-start justify-content-center details-product-texts">
                 <h3>{title}</h3>
                 <h3>
-                  <Badge>{price} $</Badge>
+                  <Badge data-tip={`${parseInt(price) * 28000} تومان`}>
+                    {price} $
+                  </Badge>
+                  <ReactTooltip />
                 </h3>
                 <p>{description}</p>
                 <p>
@@ -38,6 +42,7 @@ const ProductsDetails = (props) => {
           </Row>
         </div>
       </Container>
+      <ReactTooltip />
     </div>
   );
 };
