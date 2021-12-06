@@ -17,7 +17,7 @@ const ProductsDetails = (props) => {
     <div>
       <Container>
         <div className="border rounded-3 mt-5 p-2">
-          <Row>
+          <Row className="mt-5">
             <Col>
               <Image src={image} style={{ height: "20rem" }} fluid />
             </Col>
@@ -42,7 +42,6 @@ const ProductsDetails = (props) => {
           </Row>
         </div>
       </Container>
-      <ReactTooltip />
     </div>
   );
 };
