@@ -22,7 +22,7 @@ function App() {
           <Route path="/products/:id" component={ProductsDetails} />
           <Route path="/cart" component={ShopCart} />
           <Route path="/products" component={Store} />
-          <Redirect to="/products" />
+          <Redirect to="/products" className="bg-light" />
         </Switch>
       </CartContextProvider>
     </ProductContextProvider>

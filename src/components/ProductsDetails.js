@@ -17,11 +17,16 @@ const ProductsDetails = (props) => {
     <div>
       <Container>
         <div className="border rounded-3 mt-5 p-2">
-          <Row className="mt-5">
-            <Col>
-              <Image src={image} style={{ height: "20rem" }} fluid />
+          <Row>
+            <Col className="d-flex align-items-center">
+              <Image
+                src={image}
+                className="p-0"
+                style={{ height: "20rem" }}
+                fluid
+              />
             </Col>
-            <Col>
+            <Col className="d-flex align-items-center">
               <div className="align-items-start justify-content-center details-product-texts">
                 <h3>{title}</h3>
                 <h3>
